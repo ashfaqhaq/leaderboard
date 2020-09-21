@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+font-family: 'Montserrat', sans-serif;
+}
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-duration: 5s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+    }
+    
+	100% {
+		opacity: 1;
+	}
+}
+.name{
+   font-weight: bold;
+}
+/* .slide {
+    position: absolute;
+    left: -100px;
+    width: 100px;
+    height: 100px;
+    /* background: blue; */
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+} */
