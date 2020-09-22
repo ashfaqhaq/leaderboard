@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <title>CSV File to HTML Table Using AJAX jQuery</title>
+  <title>IPL Leaderboard</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> -->
   <link rel="stylesheet" href="style.css">
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+  <link rel="icon" type="image/png" href="/team/IPL.PNG"/>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
  </head>
  <body>
-  <div class="container bg">
-   <div class="table-responsive">
-      
-    <h1 align="center"  style="margin:1rem ;">Leaderboard</h1>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,192L30,165.3C60,139,120,85,180,64C240,43,300,53,360,85.3C420,117,480,171,540,197.3C600,224,660,224,720,234.7C780,245,840,267,900,266.7C960,267,1020,245,1080,218.7C1140,192,1200,160,1260,149.3C1320,139,1380,149,1410,154.7L1440,160L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
+  <div class="bg">
     
+   <div class="table-responsive">
+    
+    <h1 id="heading">Leaderboard</h1>
+    <img  src="/team/IPL.png" style="width: 195px ; height: 144px;" alt="IPL" class="logo">
     <br />
-    <div align="center">
-     <button type="button" name="load_data" id="load_data" class="btn btn-info" style="margin: 1rem;">Click to view the Leaderboard</button>
-     <img  src="/team/IPL.png" style="width: 100% ; height: 100%; z-index: -1;" alt="IPL" class="logo">
-    </div>
+    <!-- <div align="center"> -->
+     <!-- <button type="button" name="load_data" id="load_data" class="btn btn-info" style="margin: 1rem;">Click to view the Leaderboard</button>
+     <img  src="/team/IPL.png" style="width: 100% ; height: 100%; z-index: -1;" alt="IPL" class="logo"> -->
+    <!-- </div> -->
     <br />
     <div id="leaderboard_table" class="fade-in">
     </div>

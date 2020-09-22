@@ -2,6 +2,7 @@
 
 *{
 font-family: 'Montserrat', sans-serif;
+box-sizing: border-box;
 }
 .fade-in {
 	opacity: 1;
@@ -29,16 +30,51 @@ font-family: 'Montserrat', sans-serif;
     width: 100px;
     height: 100px;
     /* background: blue; */
-    -webkit-animation: slide 0.5s forwards;
+    /* -webkit-animation: slide 0.5s forwards;
     -webkit-animation-delay: 2s;
     animation: slide 0.5s forwards;
     animation-delay: 2s;
-}
+} */
 
-@-webkit-keyframes slide {
+/* @-webkit-keyframes slide {
     100% { left: 0; }
 }
 
 @keyframes slide {
     100% { left: 0; }
 } */
+.logo{
+    margin-left: 4rem;
+}
+
+svg{
+  
+    position: absolute;
+    z-index: -1;
+    /* margin-bottom: 1rem; */
+    
+}
+#heading{
+    color:azure;
+    font-weight: bold;
+    /* margin-top: 2rem; */
+    /* margin-left: 4rem ; */
+    /* font-size: xx-large; */
+    text-align: center;
+    margin: revert;
+}
+#leaderboard_table{
+z-index: 1;
+
+margin: 1rem;
+}
+    
+.top{
+
+    content: '';
+    /* background-color: aqua; */
+    /* content: ''; */
+    /* content: none; */
+    /* color: black; */
+    /* display: inline-flex; */
+}

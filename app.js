@@ -1,8 +1,8 @@
 
 $(document).ready(function(){
- $('#load_data').click(function(){
+//  $('#load_data').click(function(){
    $.ajax({
-   url:"data.csv",
+   url:"/data/week1.csv",
    dataType:"text",
    success:function(data)
    {
@@ -12,18 +12,24 @@ $(document).ready(function(){
     for(var count = 0; count<leaderboard_data.length; count++)
     {
      var cell_data = leaderboard_data[count].split(",");
-     table_data += '<tr>';
+     if(count==1){
+     table_data += '<tr class="top">';
+     }
      for(var cell_count=0; cell_count<cell_data.length; cell_count++)
      {
       if(count === 0)
       {
-       table_data += '<th>'+cell_data[cell_count]+'</th>';
+       table_data += '<th class="bg-warning">'+cell_data[cell_count]+'</th>';
       }
       
       else
       {
-        if(cell_count==0){
+        if(cell_count==0 && count==1){
+          table_data += '<td class="name top">'+cell_data[cell_count]+'</td>';
+          } 
+        else if(cell_count==0 && !(count==1)){
           table_data += '<td class="name">'+cell_data[cell_count]+'</td>';
+
         }
         else if(cell_count==1){
         table_data += '<td><img src="/team/'+cell_data[cell_count]+'.png" style="width:64px;height:64px;" </td>';
@@ -33,6 +39,7 @@ $(document).ready(function(){
        }
       }
       
+      
     
      }
      table_data += '</tr>';
@@ -41,14 +48,19 @@ $(document).ready(function(){
    
     $('#leaderboard_table').html(table_data);
    }
+  //  $('.logo').hide();
   });
- });
- $('#load_data').click(function(){
-  $('#leaderboard_table').addClass('slide');
-  // $("#load_data").css("visibility", "hidden");
+//  });
+// $('.logo').hide();
+//   $('.logo').hide();
   $("#load_data").hide();
-  // $("#logo").css("visibility", "hidden");
-  $('.logo').hide();
- });
+
+// $('#load_data').click(function(){
+//   $('#leaderboard_table').addClass('slide');
+//   // $("#load_data").css("visibility", "hidden");
+//   $("#load_data").hide();
+//   // $("#logo").css("visibility", "hidden");
+//   $('.logo').hide();
+//  });
  
 });
