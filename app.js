@@ -2,7 +2,7 @@
 $(document).ready(function(){
 //  $('#load_data').click(function(){
    $.ajax({
-   url:"/data/week2.csv",
+   url:"/data/week3.csv",
    dataType:"text",
    success:function(data)
    {
