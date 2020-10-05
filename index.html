@@ -3,11 +3,8 @@
  <head>
   <title>IPL Leaderboard</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> -->
   <link rel="stylesheet" href="style.css">
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css">
-  <link rel="icon" type="image/png" href="/team/IPL.PNG"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">  <link rel="icon" type="image/png" href="/team/IPL.PNG"/>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
  </head>
  <body>
@@ -24,12 +21,20 @@
      <img  src="/team/IPL.png" style="width: 100% ; height: 100%; z-index: -1;" alt="IPL" class="logo"> -->
     <!-- </div> -->
     <br />
+    
+    <div class="d-flex justify-content-center">     
+      <button type="button" class="btn" value="week1">Week 1</button>
+      <button type="button" class="btn  " value="week2">Week 2</button>
+      <button type="button" class="btn btn-secondary" value="week3">Week 3</button>
+    </div> 
+    
+    
     <div id="leaderboard_table" class="fade-in">
     </div>
    </div>
   </div>
  </body>
+ 
  <script src="app.js"></script>
-
-</html>
+ </html>
 

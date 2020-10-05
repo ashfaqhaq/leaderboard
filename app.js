@@ -1,14 +1,43 @@
 
 $(document).ready(function(){
+
+  var currentFileName='week3';
+  var current_week='Week 3';
+
+  loadData(currentFileName,current_week);
+  $("button").click(function() {
+
+    var fired_button = $(this).val();
+    
+    this.classList.toggle("active")
+    
+    var text=this.textContent;
+    loadData(fired_button,text);
+});
+// e.onchange =
+ 
+  
+ 
+ 
+   
 //  $('#load_data').click(function(){
+   function loadData(value,description){
+    // var e = document.getElementById("week");
+    // var value = e.options[e.selectedIndex].value;
+    // var text = e.options[e.selectedIndex].text;
+    console.log("executed");
+
    $.ajax({
-   url:"/data/week3.csv",
+   url:"/data/"+value+".csv" ,
    dataType:"text",
    success:function(data)
    {
+    //  if description?
+    var content= description|| current_week;
     var leaderboard_data = data.split(/\r?\n|\r/);
-    var table_data = '<table class="table black rounded table-hover">';
+    var table_data = '<h1 class="d-flex justify-content-center">'+content+'</h1> <br><table class="table black rounded table-hover">';
     console.log(leaderboard_data);
+    
     for(var count = 0; count<leaderboard_data.length; count++)
     {
      var cell_data = leaderboard_data[count].split(",");
@@ -62,5 +91,5 @@ $(document).ready(function(){
 //   // $("#logo").css("visibility", "hidden");
 //   $('.logo').hide();
 //  });
- 
+}
 });
